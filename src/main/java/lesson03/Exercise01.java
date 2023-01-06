@@ -3,7 +3,7 @@ package lesson03;
         import java.util.ArrayList;
         import java.util.List;
 
-public class Exercise03 {
+public class Exercise01 {
 
     public static void main(String[] args) {
 
