@@ -13,31 +13,31 @@ public class Exercise02 {
         Scanner in = new Scanner(System.in);
         s = in.next();
         Map<Integer, ArrayList<String>> texts = new HashMap<>();
-        System.out.println(textNum(s, texts));}
+        System.out.println(textNum(s, texts));
+        }
         while (s != "stop");
 
     }
 
     public static Map<Integer, ArrayList<String>> textNum(String s, Map<Integer, ArrayList<String>> texts) {
-
-//        int key = Integer.parseInt(s.split("~")[1]);
-        String[] mass = s.split("~");
-        System.out.println(mass);
-        int key = 0;
-        try {
-            key = Integer.parseInt(mass[1]);
-        } catch (NumberFormatException nfe) {
-            System.out.println("NumberFormatException"; }
         ArrayList<String> values = new ArrayList<>();
+        int key = Integer.parseInt(s.split("~")[1]);
+        String[] mass = s.split("~");
+//        int key = 0;
+//        try {
+//            key = Integer.parseInt(mass[1]);
+//        } catch (NumberFormatException nfe) {
+//            System.out.println("NumberFormatException"); }
 
         if (texts.containsKey(key)) {
             values = texts.get(key);
-            if (values.contains(mass[0])) {
-                System.out.println("Такой элемент уже есть");
-            } else {
-                values.add(mass[0]);
-                System.out.println("Элемент " + mass[0] + " добавлен");
-            }
+            values.add(mass[0]);
+//            if (values.contains(mass[0])) {
+//                System.out.println("Такой элемент уже есть");
+//            } else {
+//                values.add(mass[0]);
+//                System.out.println("Элемент " + mass[0] + " добавлен");
+//            }
         } else {
             values.add(mass[0]);
             texts.put(key, values);
